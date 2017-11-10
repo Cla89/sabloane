@@ -11,7 +11,7 @@ public class Test
 		
 		
 		
-		Sectiune sec = new Sectiune("bllala");
+		Sectiune sec = new Sectiune("SALUT");
 		sec.addElement(new Paragraf("blallalaaaa"));
 		
 		cap.addElement(sec);

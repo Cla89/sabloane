@@ -36,6 +36,7 @@ public class Paragraf implements Elemente
 			return 0;
 	}
 	
+	
 	public void accept(Visitor v)
 	{
 		v.visitParagraf(this);

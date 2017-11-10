@@ -32,6 +32,7 @@ public class Sectiune implements Elemente
 		}
 	}
 	
+	
 	public void accept(Visitor v)
 	{
 		v.visitSectiune(this);

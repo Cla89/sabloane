@@ -6,6 +6,4 @@ public interface Visitor
 	public void visitSectiune(Sectiune s);
 	public void visitTabel(Tabel t);
 	public void visitParagraf(Paragraf p);
-	
-
 }

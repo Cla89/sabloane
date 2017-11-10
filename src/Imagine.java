@@ -13,6 +13,7 @@ public class Imagine extends AbstractElement
 	{	
 		
 	}	
+	
 	public void removeElement(Elemente e) 
 	{
 		
