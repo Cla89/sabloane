@@ -1,32 +1,21 @@
 
 public class Imagine extends AbstractElement 
 {
-	public String imagePath;
-	private Imagine imageData;
+	private String imagePath;
 
 	public Imagine(String img)
 	{
 		this.imagePath = img;
-	}
-		
-	public void addElement(Elemente e) 
-	{	
-		
-	}	
-	
-	public void removeElement(Elemente e) 
-	{
-		
-	}
-
-	public int getElemente() 
-	{
-		return 0;
 	}
 
 	public void print() 
 	{	
 		System.out.println(imagePath);
 	}
+	
+	public void acceptVisitor(Visitor v)
+	{
+        v.visitImagine(this);
+    }
 
 }

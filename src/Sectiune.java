@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Sectiune implements Elemente 
 {
-	public String titlu;	
+	private String titlu;	
 	private ArrayList<Elemente> elem = new ArrayList<Elemente>();
 	
 	public Sectiune(String t)
@@ -14,14 +14,21 @@ public class Sectiune implements Elemente
 	{
 		elem.add(e);		
 	}
+	
 	public void removeElement(Elemente e) 
 	{		
 		elem.remove(e);
 	}
-	public int getElemente() 
+	
+	public Elemente getElemente(int index) 
 	{
-		return elem.size();
+		return elem.get(index);
 	}
+	
+	public ArrayList<Elemente> getElemente()
+	{
+        return elem;
+    }
 
 	public void print() 
 	{
@@ -33,7 +40,7 @@ public class Sectiune implements Elemente
 	}
 	
 	
-	public void accept(Visitor v)
+	public void acceptVisitor(Visitor v)
 	{
 		v.visitSectiune(this);
 	}

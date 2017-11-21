@@ -1,11 +1,41 @@
 import java.util.ArrayList;
 
-public class Carte 
+public class Carte
 {
 
-	public String titlu;
-	public ArrayList<Autor> autori;
-	public ArrayList<Capitol> capitole;
-	public Cuprins cuprins;	
+	private String titlu;
+	private ArrayList<Autor> autori;
+	private ArrayList<Elemente> continut=new ArrayList<Elemente>();
+	private DocumentStatisticVisitor stats=new DocumentStatisticVisitor();
+	
+	public Carte(String titlu)
+	{
+		this.titlu=titlu;
+	}
+	public Carte(String titlu, ArrayList<Autor>autori)
+	{
+		this.titlu=titlu;
+		this.autori=autori;
+	}
+	
+	public void addElement(Elemente elem) 
+	{
+		this.continut.add(elem);		
+	}
 
+	public void print()
+	{
+		System.out.println("Titlu: "+titlu);
+		for(Autor x : autori)
+			System.out.println(x);
+	    for(Elemente e : continut)
+	        System.out.println(e);
+	}
+
+	
+	public void acceptVisitor(Visitor v)
+	{
+        for(Elemente e : continut)
+            e.acceptVisitor(v);
+    }
 }

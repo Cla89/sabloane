@@ -1,39 +1,26 @@
 
-public class Paragraf implements Elemente
+public class Paragraf extends AbstractElement
 {
-	public String text;
-	public Paragraf()
+	private String text;
+	private AlignStrategy strategy = null;
+	
+	public Paragraf(String text)
 	{
-		 this.text = "none";
+		this.text=text;
 	}
-
-	public Paragraf(String txt)
+	
+	public void setAlign(AlignStrategy strategy)
 	{
-		this.text = txt;
+	    this.strategy = strategy;
 	}
-
-
+	
 	public void print() 
-	{	
-		System.out.println(text);
-	}
-
-	public void addElement(Elemente e) 
 	{
-			// TODO Auto-generated method stub
-			
-	}
-
-	public void removeElement(Elemente e) 
-	{
-			// TODO Auto-generated method stub
-			
-	}
-
-	public int getElemente() 
-	{
-			// TODO Auto-generated method stub
-			return 0;
+		
+		if(strategy != null)
+			strategy.printAligned(text);
+	    else 
+	        System.out.println(text);
 	}
 	
 	

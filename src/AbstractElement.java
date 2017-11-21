@@ -24,4 +24,15 @@ public class AbstractElement implements Elemente
 		
 	}
 
+	public Elemente getElemente(int index) 
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void acceptVisitor(Visitor v) 
+	{
+		// TODO Auto-generated method stub	
+	}
+
 }

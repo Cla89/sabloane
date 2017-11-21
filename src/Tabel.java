@@ -1,35 +1,26 @@
 
-public class Tabel implements Elemente 
+public class Tabel extends AbstractElement
 {
-	public String numeTabel;
+	private String numeTabel;
 	
-	public Tabel()
-	{
-		this.numeTabel = "none";
-	}
 
 	public Tabel(String numT)
 	{
 		this.numeTabel = numT;
 	}
-
-	public void addElement(Elemente e)
-	{
-		
-	}
-	public void removeElement(Elemente e) 
-	{		
-			
-	}
-	public int getElemente() 
-	{
-		return 0;
-	}
-
 		
 	public void print() 
 	{
-		System.out.println(numeTabel);
+		System.out.println("Nume tabel: " + numeTabel);
 	}
-
+	
+	public void acceptVisitor(Visitor v)
+	{
+    	v.visitTabel(this);
+    }
+	
+	public String toString()
+    {
+        return numeTabel;
+    }
 }
