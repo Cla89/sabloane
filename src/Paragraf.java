@@ -1,5 +1,5 @@
 
-public class Paragraf extends AbstractElement
+public class Paragraf extends SubjectElement
 {
 	private String text;
 	private AlignStrategy strategy = null;
@@ -27,6 +27,26 @@ public class Paragraf extends AbstractElement
 	public void accept(Visitor v)
 	{
 		v.visitParagraf(this);
+	}
+
+	public void notifyObservers() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void addElement(Elemente e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void removeElement(Elemente e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Elemente getElemente(int index) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

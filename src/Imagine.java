@@ -1,5 +1,5 @@
 
-public class Imagine extends AbstractElement 
+public class Imagine extends SubjectElement 
 {
 	private String imagePath;
 
@@ -17,5 +17,25 @@ public class Imagine extends AbstractElement
 	{
         v.visitImagine(this);
     }
+
+	public void notifyObservers() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void addElement(Elemente e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void removeElement(Elemente e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Elemente getElemente(int index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

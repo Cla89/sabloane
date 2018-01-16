@@ -26,8 +26,6 @@ public class Carte
 	public void print()
 	{
 		System.out.println("Titlu: "+titlu);
-		for(Autor x : autori)
-			System.out.println(x);
 	    for(Elemente e : continut)
 	        System.out.println(e);
 	}

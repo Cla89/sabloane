@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Sectiune implements Elemente 
+public class Sectiune extends SubjectElement 
 {
 	private String titlu;	
 	private ArrayList<Elemente> elem = new ArrayList<Elemente>();
@@ -43,6 +43,11 @@ public class Sectiune implements Elemente
 	public void acceptVisitor(Visitor v)
 	{
 		v.visitSectiune(this);
+	}
+
+	public void notifyObservers() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

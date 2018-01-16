@@ -22,15 +22,30 @@ public class Test
         Book.addElement(image);
         Book.addElement(image2);
         Book.addElement(imageProxy);
-
+        
 
         DocumentStatisticVisitor d = new DocumentStatisticVisitor();
         Book.acceptVisitor(d);
         d.printStatistics();
-        
+        Book.print();
         
         BookBuilder builder=new BookBuilder("carte.json");
         builder.build();
+        
+        
+        
+        Observer o = new SimpleObserver();
+        Paragraf p1 = new Paragraf("Paragraf");
+        Paragraf p2 = new Paragraf("Paragraf2");
+        Imagine imga = new Imagine("Image2");
+        Sectiune s = new Sectiune("Titlu");
+        p1.attach(o);
+        p2.attach(o);
+        imga.attach(o);
+        s.attach(o);
+        s.Add(p1);
+        s.Add(p2);
+        s.Add(imga);
 	}
 
 }
